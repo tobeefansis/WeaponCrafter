@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab6db7a276ab46d0a63806a248808a0, type: 3}
-  m_Name: ItemData
+  m_Script: {fileID: 11500000, guid: 134d9bc1cdc14526953581a3bbae268d, type: 3}
+  m_Name: Test Item
   m_EditorClassIdentifier: 
-  itemName: Test
-  itemSprite: {fileID: 1537127600, guid: 58906d62108e546638f03b3ebe1f22d4, type: 3}
-  itemMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  maxCount: 1
+  ItemName: Test
+  ItemSprite: {fileID: 1460535429, guid: 45a255b0a6c2b4b81b94f074789ad8a3, type: 3}
+  ItemMesh: {fileID: 0}

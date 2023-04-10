@@ -3,15 +3,11 @@ using UnityEngine;
 
 namespace Modules.Inventory
 {
-    [Serializable]
-    public class Item 
+    [CreateAssetMenu(menuName = "Items/Create ItemData", fileName = "ItemData", order = 0)]
+    public class Item  : ScriptableObject
     {
-        [SerializeField] private ItemData _data;
-        [SerializeField] private int count;
-        public string ItemName=> _data.itemName;
-        public int ItemCount=> count;
-        public Sprite ItemSprite=> _data.itemSprite;
-        public Mesh ItemMesh=> _data.itemMesh;
-        public int MaxCount=> _data.maxCount;
+        public string ItemName;
+        public Sprite ItemSprite;
+        public Mesh ItemMesh;
     }
 }
