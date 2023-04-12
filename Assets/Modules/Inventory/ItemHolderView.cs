@@ -44,7 +44,13 @@ namespace Modules.Inventory
         {
             Debug.Log($"asdasdasd {Item}");
             if (Item != null) return;
+           
             dragAndDropModel.Drop(this);
+        }
+
+        public virtual bool DropConditions(Item item)
+        {
+            return true;
         }
     }
 }

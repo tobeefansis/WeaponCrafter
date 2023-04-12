@@ -10,34 +10,39 @@ namespace Modules.Inventory
         [SerializeField] private InventoryItemHolderView itemHolderView;
         [SerializeField] private Transform itemParentTransform;
         [SerializeField] private List<InventoryItemHolderView> items = new List<InventoryItemHolderView>();
-        [Inject] private DiContainer diContainer;
-        [Inject] private InventoryData inventoryData;
 
-        private void Start()
+        public List<InventoryItemHolderView> Items
         {
-            CreateHolders();
+            get => items;
+            set => items = value;
         }
-        private void CreateHolders()
+
+        [Inject] private DiContainer diContainer;
+        //[Inject] private InventoryData inventoryData;
+
+       
+
+        public void CreateHolders(List<Item> newItems)
         {
-            for (int i = 0; i < inventoryData.items.Count; i++)
+            for (int i = 0; i < newItems.Count; i++)
             {
                 var inventoryDataInstance =
-                    diContainer.InstantiatePrefabForComponent<InventoryItemHolderView>(itemHolderView,itemParentTransform);
+                    diContainer.InstantiatePrefabForComponent<InventoryItemHolderView>(itemHolderView,
+                        itemParentTransform);
                 inventoryDataInstance.ItemIndex = i;
                 items.Add(inventoryDataInstance);
             }
 
-            Refresh();
+            Refresh(newItems);
         }
 
-        public void Refresh()
+        public void Refresh(List<Item> newItems)
         {
-            for (var index = 0; index < inventoryData.items.Count ; index++)
+            for (var index = 0; index < newItems.Count; index++)
             {
                 var holderView = items[index];
                 holderView.Refresh();
             }
         }
     }
-    
 }

@@ -1,6 +1,7 @@
+using Modules.Inventory;
 using UnityEngine;
 
-public abstract class PartWeapon 
+public abstract class PartWeapon : Item
 {
     public Material material;
     public Mesh mesh;

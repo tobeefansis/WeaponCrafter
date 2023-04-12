@@ -18,22 +18,24 @@ namespace Modules.Inventory
             item = selectItem;
             lastItemHolder = selectHolder;
             selectHolder.SetItem(null);
-            dragAndDropView.SetItem(item,selectHolder.transform.position);
-        } 
+            dragAndDropView.SetItem(item, selectHolder.transform.position);
+        }
+
         public void EndDrag(ItemHolderView selectHolder)
         {
-            if (item == null ) return;
+            if (item == null) return;
             lastItemHolder.SetItem(item);
             item = null;
-            dragAndDropView.SetItem(null,selectHolder.transform.position);
+            dragAndDropView.SetItem(null, selectHolder.transform.position);
         }
+
         public void Drop(ItemHolderView selectHolder)
         {
-           
+            if (!selectHolder.DropConditions(item)) return;
+
             selectHolder.SetItem(item);
             item = null;
-            dragAndDropView.SetItem(null,selectHolder.transform.position);
+            dragAndDropView.SetItem(null, selectHolder.transform.position);
         }
-      
     }
 }

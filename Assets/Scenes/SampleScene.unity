@@ -222,8 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
-  - {fileID: 1834409252}
   - {fileID: 1858159557}
+  - {fileID: 1834409252}
   - {fileID: 573579054}
   _installerPrefabs: []
   _autoRun: 1
@@ -254,9 +254,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1834409251}
-  - {fileID: 573579053}
   - {fileID: 1858159556}
+  - {fileID: 573579053}
+  - {fileID: 1834409251}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -688,7 +688,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 233620709}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1834409252
 MonoBehaviour:
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponConstructor: {fileID: 1264805223965536730, guid: 5fc22276e5ef4468cbbcc280bcf26eac,
     type: 3}
-  weaponConstructorUI: {fileID: 5314545316869306491, guid: cb5ac898d4e2648459c702683d4fcea9,
+  weaponConstructorView: {fileID: 5314545316869306491, guid: cb5ac898d4e2648459c702683d4fcea9,
     type: 3}
   canvas: {fileID: 1031541316}
 --- !u!1 &1843928626
@@ -949,7 +949,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 233620709}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1858159557
 MonoBehaviour:

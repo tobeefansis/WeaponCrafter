@@ -1,8 +1,9 @@
+using Modules.Inventory;
 using UnityEngine;
 
 namespace Modules.WeaponConstructor
 {
-    public class Weapon 
+    public class Weapon :Item
     {
         
     }
